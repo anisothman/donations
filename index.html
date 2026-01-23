@@ -24,7 +24,10 @@
     <nav class="hidden md:flex gap-6 font-semibold">
       <a href="#stats">الوضعية</a>
       <a href="#materials">المواد</a>
-      <a href="#contact">تواصل</a>
+      <a href="#donations">التبرعات المالية</a>
+      <a href="#contribute">كيف يمكن المشاركة معكم</a>
+
+      <a href="#contact">التواصل معنا</a>
     </nav>
   </div>
 </header>
@@ -46,6 +49,32 @@
 
 <!-- ================= STATS ================= -->
 <section id="stats" class="py-10 max-w-7xl mx-auto px-6">
+  <div class="max-w-md mx-auto mb-10 p-4 bg-red-100 border border-red-400 rounded-lg text-center">
+    <p class="text-red-700 font-bold text-lg mb-4">
+      نرجو منكم بلطف تجنب جلب المواد المقاطعة.
+    </p>
+
+    <!-- زر لإظهار المواد المقاطعة -->
+    <button id="toggleBlockedBtn" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-md transition">
+      اضغط هنا لعرض أهم المواد المقاطعة
+    </button>
+
+    <!-- قائمة المواد المقاطعة (مخفية بشكل افتراضي) -->
+    <div id="blockedMaterials" class="mt-4 p-4 bg-red-50 border border-red-300 rounded-lg text-right text-red-700 font-semibold hidden max-w-md mx-auto">
+      <ul class="list-disc list-inside space-y-2">
+        <li>الوردة البيضاء</li>
+        <li>دليس</li>
+        <li>السيدة </li>
+        <li>president </li>
+        <li>sicam </li>
+        <li>nestle </li>
+        <li>ماء ميليتي </li>
+         <li>ماء صابرين </li>
+
+      </ul>
+    </div>
+  </div>
+
   <h3 class="text-3xl font-bold mb-12 text-center">📊 الوضعية الحالية</h3>
 
   <div class="grid md:grid-cols-4 gap-8 text-center">
@@ -63,34 +92,45 @@
 
 <!-- ================= MATERIALS ================= -->
 <section id="materials" class="py-16 max-w-7xl mx-auto px-6">
-  <h3 class="text-3xl font-bold mb-12 text-center">🥫 المواد المتبرع بها</h3>
+  <h3 class="text-3xl font-bold mb-6 text-center">🥫 المواد المتبرع بها</h3>
 
   <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto text-lg">
 
     <div class="bg-white p-6 rounded-xl shadow text-center">
-      <h4 class="font-bold text-xl mb-2">سميد</h4>
+      <h4 class="font-bold text-xl mb-2">كسكسي</h4>
       <p class="text-green-700 font-semibold">0 كغ</p>
-      <p class="mt-3 text-red-600 font-semibold">⚠️ نقص في السميد</p>
+      <p class="mt-3 text-red-600 font-semibold">⚠️ نقص في الكسكسي</p>
     </div>
-
+<div class="bg-white p-6 rounded-xl shadow text-center">
+      <h4 class="font-bold text-xl mb-2">مقرونة</h4>
+      <p class="text-green-700 font-semibold">0 كغ</p>
+      <p class="mt-3 text-red-600 font-semibold">⚠️ نقص في المقرونة</p>
+    </div>
+    <div class="bg-white p-6 rounded-xl shadow text-center">
+      <h4 class="font-bold text-xl mb-2">حليب</h4>
+      <p class="text-green-700 font-semibold">0 ل</p>
+      <p class="mt-3 text-red-600 font-semibold">⚠️ نقص في الحليب</p>
+    </div>
     <div class="bg-white p-6 rounded-xl shadow text-center">
       <h4 class="font-bold text-xl mb-2">زيت</h4>
       <p class="text-green-700 font-semibold">0 لتر</p>
+     <p class="mt-3 text-red-600 font-semibold">⚠️ نقص في الزيت</p>
+
     </div>
 
     <div class="bg-white p-6 rounded-xl shadow text-center">
       <h4 class="font-bold text-xl mb-2">سكر</h4>
       <p class="text-green-700 font-semibold">0 كغ</p>
+      <p class="mt-3 text-red-600 font-semibold">⚠️ نقص في السكر</p>
+
     </div>
 
-    <div class="bg-white p-6 rounded-xl shadow text-center">
-      <h4 class="font-bold text-xl mb-2">عجائن</h4>
-      <p class="text-green-700 font-semibold">0 كغ</p>
-    </div>
 
     <div class="bg-white p-6 rounded-xl shadow text-center">
       <h4 class="font-bold text-xl mb-2">معلبات</h4>
       <p class="text-green-700 font-semibold">0 وحدة</p>
+      <p class="mt-3 text-red-600 font-semibold">⚠️ نقص في المعلبات</p>
+
     </div>
 
   </div>
@@ -99,13 +139,59 @@
     يمكنك المساهمة بما يتيسر لك من المواد السابقة.
   </p>
 </section>
+<section id="donations" class="py-16 max-w-4xl mx-auto px-6 bg-green-50 rounded-xl shadow-md mb-16">
+  <h3 class="text-3xl font-bold mb-6 text-center text-green-800">💵 كم عندنا من تبرعات مالية؟</h3>
+
+  <div class="bg-white p-10 rounded-xl shadow text-center text-green-700 font-bold text-5xl md:text-6xl">
+    0 د.ت
+  </div>
+
+  <p class="mt-6 text-center text-green-800 text-lg">
+    يمكنكم التواصل معانا وتسلم وصل اثناء تبرعكم </br>
+    شكرًا لكل من ساهم في دعم الحملة. تبرعاتكم هي سبب نجاحنا واستمرارنا في العطاء.
+  </p>
+</section>
+
+<!-- ================= HOW TO CONTRIBUTE ================= -->
+<section id="contribute" class="py-16 max-w-7xl mx-auto px-6 bg-green-50 rounded-xl shadow-md mb-16">
+  <h3 class="text-3xl font-bold mb-10 text-center text-green-800">🤝 كيف أساهم معكم؟</h3>
+
+  <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto text-green-800">
+    <!-- كرت التبرع بالمواد -->
+    <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition cursor-default">
+      <div class="text-4xl mb-4 text-green-600">🥫</div>
+      <h4 class="font-semibold text-center text-xl mb-2">التبرع بالمواد الغذائية</h4>
+      <p class="text-center">ساهم بالتبرع بالمواد الغذائية نحن متواجدون بالمعهد.</p>
+    </div>
+
+    <!-- كرت التبرع المالي -->
+    <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition cursor-default">
+      <div class="text-4xl mb-4 text-center text-green-600">💰</div>
+      <h4 class="font-semibold text-center  text-xl mb-2">التبرع المالي</h4>
+      <p class="text-center">يمكنك التبرع ماليًا عبر تطبيق <strong>D17</strong>  على الرقم 28893766  بعد التنسيق معنا.</p>
+    </div>
+
+    <!-- كرت نشر الوعي -->
+    <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition cursor-default">
+      <div class="text-4xl mb-4 text-center text-green-600">📣</div>
+      <h4 class="font-semibold text-center text-xl mb-2">مشاركة الحملة</h4>
+      <p class="text-center">شارك الحملة مع أصدقائك وعائلتك لزيادة الوعي والمشاركة.<br>فالدال على الخير كفاعله</p>
+    </div>
+  </div>
+
+  <!-- رسالة تحفيزية تحت الكروت -->
+  <div class="bg-green-100 p-6 rounded-xl shadow text-center text-green-900 font-semibold text-lg mt-12 max-w-md mx-auto">
+    مساهمتك تصنع فرقًا كبيرًا ❤️ 
+  </div>
+</section>
+
 
 <!-- ================= PALESTINE ================= -->
 <section id="palestine" class="bg-red-900 text-white py-12 px-6 max-w-7xl mx-auto rounded-xl shadow-lg my-16">
-  <h3 class="text-4xl font-bold mb-6 text-center">لا ننسى القضية الفلسطينية</h3>
+  <h3 class="text-4xl font-bold mb-6 text-center">لا تنسى القضية الفلسطينية</h3>
 
   <p class="text-center max-w-3xl mx-auto mb-6 text-lg leading-relaxed">
-    الاتحاد العام التونسي للطلبة يؤكد دعمه الكامل لكل حركات المقاومة وعلى رأسها حركة المقاومة الإسلامية (حماس)  وكل من يدافع عن حقوق الشعب الفلسطيني في وجه الاحتلال.
+    نؤكد دعمنا الكامل لكل حركات المقاومة الفلسطينية وعلى رأسها حركة المقاومة الإسلامية (حماس) وكل من يدافع عن الحق الفلسطيني ضد وجه الاحتلال.
   </p>
   <p class="text-center max-w-3xl mx-auto mb-6 text-lg leading-relaxed">لا تنسوا الدعاء لإخوانكم</p>
 
@@ -169,7 +255,7 @@
   changeQuote();
   setInterval(changeQuote, 3000);
 
-  // العد التنازلي (أيام + ساعات + دقائق + ثواني)
+  // العد التنازلي (عرض الأيام فقط)
   function updateCountdown() {
     const endDate = new Date("2026-02-09T23:59:59");
     const now = new Date();
@@ -183,22 +269,26 @@
     }
 
     const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-    diff %= (1000 * 60 * 60 * 24);
 
-    const hours = Math.floor(diff / (1000 * 60 * 60));
-    diff %= (1000 * 60 * 60);
-
-    const minutes = Math.floor(diff / (1000 * 60));
-    diff %= (1000 * 60);
-
-    const seconds = Math.floor(diff / 1000);
-
-    el.innerText =
-      `${days} يوم · ${hours} س · ${minutes} د · ${seconds} ث`;
+    el.innerText = `${days} يوم`;
   }
 
   updateCountdown();
   setInterval(updateCountdown, 1000);
+
+  // زر إظهار وإخفاء المواد المقاطعة
+  const toggleBtn = document.getElementById('toggleBlockedBtn');
+  const blockedDiv = document.getElementById('blockedMaterials');
+
+  toggleBtn.addEventListener('click', () => {
+    blockedDiv.classList.toggle('hidden');
+    // تغيير نص الزر حسب الحالة
+    if (blockedDiv.classList.contains('hidden')) {
+      toggleBtn.innerText = " اضغط هنا لعرض أهم المواد المقاطعة";
+    } else {
+      toggleBtn.innerText = "إخفاء المواد المقاطعة";
+    }
+  });
 </script>
 
 </body>
