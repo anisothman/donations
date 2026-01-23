@@ -2,7 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>حملة قفة رمضان | UGTE ISIMM</title>
 
   <!-- Google Font -->
@@ -18,77 +18,122 @@
 <header class="bg-green-700 text-white sticky top-0 z-50 shadow">
   <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
     <div class="flex items-center gap-3">
-      <img src="logo.webp" alt="UGTE" class="h-10 w-auto">
+      <img src="logo.webp" alt="UGTE" class="h-10 w-auto" />
       <h1 class="text-xl md:text-2xl font-bold">🌙 حملة قفة رمضان – UGTE ISIMM</h1>
     </div>
     <nav class="hidden md:flex gap-6 font-semibold">
-      <a href="#stats" class="hover:underline">الوضعية</a>
-      <a href="#materials" class="hover:underline">المواد</a>
-      <a href="#contact" class="hover:underline">تواصل</a>
+      <a href="#stats">الوضعية</a>
+      <a href="#materials">المواد</a>
+      <a href="#contact">تواصل</a>
+      <a href="#commentsSection">تعليقات</a>
     </nav>
   </div>
 </header>
 
 <!-- ================= HERO ================= -->
-<section class="bg-green-800 text-white text-center py-24 px-6">
+<section class="bg-green-800 text-white text-center py-28 px-6">
   <h2 class="text-4xl md:text-5xl font-extrabold mb-6">معًا نُكمل 100 قفة 🤍</h2>
   <h3 class="text-xl mb-6">مبادرة طلابية تضامنية</h3>
 
-  <p id="quote" class="text-2xl italic font-semibold max-w-3xl mx-auto min-h-[48px]"></p>
+  <!-- اقتباس -->
+  <p id="quote" class="text-2xl italic font-semibold max-w-3xl mx-auto"></p>
 
-  <h3 class="text-lg mt-10">⏳ المدة المتبقية على نهاية الحملة:</h3>
-  <div id="countdown" class="mt-4 text-2xl md:text-3xl font-bold text-yellow-300"></div>
+  <!-- العد التنازلي -->
+  <h3 class="text-lg mt-10">
+    ⏳ المدة المتبقية على نهاية الحملة:
+    <strong id="countdown" class="text-yellow-300"></strong>
+  </h3>
 </section>
 
 <!-- ================= STATS ================= -->
-<section id="stats" class="pt-20 pb-8 max-w-7xl mx-auto px-6">
-  <h3 class="text-3xl font-bold mb-10 text-center">📊 الوضعية الحالية</h3>
+<section id="stats" class="py-20 max-w-7xl mx-auto px-6">
+  <h3 class="text-3xl font-bold mb-12 text-center">📊 الوضعية الحالية</h3>
 
-  <div class="flex justify-center">
-    <div class="bg-white p-8 rounded-2xl shadow hover:shadow-lg transition w-full md:w-1/4 text-center">
-      <p class="text-5xl font-extrabold text-green-700">58</p>
-      <p class="font-semibold mt-2">عدد المتبرعين</p>
+  <div class="grid md:grid-cols-4 gap-8 text-center">
+
+    <!-- عدد المتبرعين في الوسط -->
+    <div class="md:col-span-4 flex justify-center">
+      <div class="bg-white p-6 rounded-2xl shadow w-full md:w-1/4">
+        <p class="text-4xl font-extrabold text-green-700">58</p>
+        <p class="font-semibold">عدد المتبرعين</p>
+      </div>
     </div>
+
   </div>
 </section>
 
 <!-- ================= MATERIALS ================= -->
-<section id="materials" class="pt-6 pb-20 max-w-7xl mx-auto px-6">
+<section id="materials" class="py-20 max-w-7xl mx-auto px-6">
   <h3 class="text-3xl font-bold mb-12 text-center">🥫 المواد المتبرع بها</h3>
 
   <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto text-lg">
 
-    <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition text-center">
+    <div class="bg-white p-6 rounded-xl shadow text-center">
       <h4 class="font-bold text-xl mb-2">سميد</h4>
       <p class="text-green-700 font-semibold">30 كغ</p>
       <p class="mt-3 text-red-600 font-semibold">⚠️ نقص في السميد</p>
     </div>
 
-    <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition text-center">
+    <div class="bg-white p-6 rounded-xl shadow text-center">
       <h4 class="font-bold text-xl mb-2">زيت</h4>
       <p class="text-green-700 font-semibold">20 لتر</p>
     </div>
 
-    <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition text-center">
+    <div class="bg-white p-6 rounded-xl shadow text-center">
       <h4 class="font-bold text-xl mb-2">سكر</h4>
       <p class="text-green-700 font-semibold">25 كغ</p>
     </div>
 
-    <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition text-center">
+    <div class="bg-white p-6 rounded-xl shadow text-center">
       <h4 class="font-bold text-xl mb-2">عجائن</h4>
       <p class="text-green-700 font-semibold">18 كغ</p>
     </div>
 
-    <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition text-center">
+    <div class="bg-white p-6 rounded-xl shadow text-center">
       <h4 class="font-bold text-xl mb-2">معلبات</h4>
       <p class="text-green-700 font-semibold">40 وحدة</p>
     </div>
 
   </div>
 
-  <p class="text-center mt-8 text-sm text-gray-500">
+  <p class="text-center mt-10 text-sm text-gray-500">
     يمكنك المساهمة بما يتيسر لك من المواد السابقة.
   </p>
+</section>
+
+<!-- ================= COMMENTS ================= -->
+<section id="commentsSection" class="py-20 bg-gray-100">
+  <div class="max-w-3xl mx-auto px-6">
+    <h3 class="text-3xl font-bold text-center mb-8">💬 تعليقاتكم</h3>
+
+    <!-- فورم التعليق -->
+    <form id="commentForm" class="bg-white p-6 rounded-xl shadow space-y-6 max-w-xl mx-auto mb-10">
+      <input
+        type="text"
+        id="name"
+        placeholder="اسمك (اختياري)"
+        class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600"
+        maxlength="30"
+      />
+      <textarea
+        id="comment"
+        required
+        placeholder="اكتب تعليقك هنا..."
+        rows="4"
+        maxlength="300"
+        class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 resize-none"
+      ></textarea>
+      <button
+        type="submit"
+        class="w-full bg-green-700 text-white py-3 rounded-lg font-bold hover:bg-green-800 transition"
+      >
+        إرسال التعليق
+      </button>
+    </form>
+
+    <!-- عرض التعليقات أسفل الفورم -->
+    <div id="commentsContainer" class="space-y-6 max-w-xl mx-auto"></div>
+  </div>
 </section>
 
 <!-- ================= CONTACT ================= -->
@@ -108,42 +153,125 @@
 
 <!-- ================= SCRIPTS ================= -->
 <script>
-// اقتباسات
-const quotes = [
-  "«وتعاونوا على البر والتقوى»",
-  "«قفة صغيرة، أثرها كبير»",
-  "«في رمضان، التكافل عبادة»"
-];
-let qi = 0;
-const quoteEl = document.getElementById("quote");
-function rotateQuote() {
-  quoteEl.textContent = quotes[qi % quotes.length];
-  qi++;
-}
-rotateQuote();
-setInterval(rotateQuote, 3000);
+  // اقتباسات متغيرة
+  const quotes = [
+    "«وتعاونوا على البر والتقوى»",
+    "«قفة صغيرة، أثرها كبير»",
+    "«في رمضان، التكافل عبادة»"
+  ];
 
-// العد التنازلي
-function updateCountdown() {
-  const endDate = new Date("2026-02-09T23:59:59").getTime();
-  const now = new Date().getTime();
-  const diff = endDate - now;
-  const el = document.getElementById("countdown");
+  let i = 0;
+  const quoteEl = document.getElementById("quote");
 
-  if (diff <= 0) {
-    el.textContent = "انتهت الحملة 🤍";
-    return;
+  function changeQuote() {
+    quoteEl.innerText = quotes[i % quotes.length];
+    i++;
   }
 
-  const d = Math.floor(diff / (1000 * 60 * 60 * 24));
-  const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
-  const m = Math.floor((diff / (1000 * 60)) % 60);
-  const s = Math.floor((diff / 1000) % 60);
+  changeQuote();
+  setInterval(changeQuote, 3000);
 
-  el.textContent = `${d} يوم · ${h} س · ${m} د · ${s} ث`;
-}
-updateCountdown();
-setInterval(updateCountdown, 1000);
+  // العد التنازلي (أيام + ساعات + دقائق + ثواني)
+  function updateCountdown() {
+    const endDate = new Date("2026-02-09T23:59:59");
+    const now = new Date();
+
+    let diff = endDate - now;
+    const el = document.getElementById("countdown");
+
+    if (diff <= 0) {
+      el.innerText = "انتهت الحملة 🤍";
+      return;
+    }
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    diff %= (1000 * 60 * 60 * 24);
+
+    const hours = Math.floor(diff / (1000 * 60 * 60));
+    diff %= (1000 * 60 * 60);
+
+    const minutes = Math.floor(diff / (1000 * 60));
+    diff %= (1000 * 60);
+
+    const seconds = Math.floor(diff / 1000);
+
+    el.innerText =
+      `${days} يوم · ${hours} س · ${minutes} د · ${seconds} ث`;
+  }
+
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+
+  // ===== تعليقات المستخدمين (localStorage) =====
+
+  // جلب التعليقات من localStorage أو إنشاء تعليقات افتراضية
+  let comments = JSON.parse(localStorage.getItem('comments')) || [
+    {name: "طالب", text: "مبادرة رائعة، ربي يبارك فيكم 🤍"},
+    {name: "زائرة", text: "فكرة القفة مهمة برشة، بالتوفيق"},
+    {name: "متبرع", text: "إن شاء الله توصلوا للهدف 💪"},
+    {name: "طالبة", text: "عمل إنساني نفتخر به"}
+  ];
+
+  const commentsContainer = document.getElementById('commentsContainer');
+  const form = document.getElementById('commentForm');
+
+  // دالة لعرض 3 تعليقات عشوائية
+  function displayComments() {
+    commentsContainer.innerHTML = '';
+
+    // خلط التعليقات واختيار أول 3
+    let shuffled = comments
+      .map(value => ({ value, sort: Math.random() }))
+      .sort((a, b) => a.sort - b.sort)
+      .map(({ value }) => value)
+      .slice(0, 3);
+
+    shuffled.forEach(c => {
+      const div = document.createElement('div');
+      div.classList.add('bg-white', 'p-5', 'rounded-xl', 'shadow');
+
+      const nameEl = document.createElement('div');
+      nameEl.classList.add('font-semibold', 'text-green-700', 'mb-2');
+      nameEl.textContent = c.name ? c.name : "مجهول";
+
+      const textEl = document.createElement('div');
+      textEl.classList.add('text-gray-700', 'leading-relaxed');
+      textEl.textContent = c.text;
+
+      div.appendChild(nameEl);
+      div.appendChild(textEl);
+
+      commentsContainer.appendChild(div);
+    });
+  }
+
+  // استدعاء العرض عند تحميل الصفحة
+  displayComments();
+
+  // التعامل مع إرسال الفورم
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const nameInput = document.getElementById('name').value.trim();
+    const commentInput = document.getElementById('comment').value.trim();
+
+    if (!commentInput) {
+      alert("الرجاء كتابة تعليق.");
+      return;
+    }
+
+    // إضافة التعليق الجديد للمصفوفة
+    comments.push({ name: nameInput, text: commentInput });
+
+    // حفظ التعليقات في localStorage
+    localStorage.setItem('comments', JSON.stringify(comments));
+
+    // إعادة عرض التعليقات
+    displayComments();
+
+    // مسح الحقول
+    form.reset();
+  });
 </script>
 
 </body>
