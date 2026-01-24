@@ -15,13 +15,14 @@
 <body class="font-[Cairo] bg-gray-50 text-gray-800">
 
 <!-- ===== BACKGROUND MUSIC ===== -->
-<audio id="bgMusic" autoplay loop preload="auto">
+<audio id="bgMusic" loop preload="auto">
   <source src="FDownload.app-596128269058406-(320kbps).mp3" type="audio/mpeg">
+  <!-- يمكنك وضع رابط كامل إذا كانت الأغنية على الإنترنت -->
 </audio>
 
 <button id="audioToggleBtn"
   class="fixed bottom-5 left-5 bg-green-700 hover:bg-green-800 text-white px-5 py-2 rounded-full shadow-lg z-50 transition">
-  🔇 إيقاف الصوت
+  🔊 تشغيل الصوت
 </button>
 
 <!-- ================= HEADER ================= -->
@@ -52,10 +53,7 @@
   </h3>
 </section>
 
-<!-- بقية المحتوى كما هو (لم أغيّر فيه شيء) -->
-<!-- ……………………………………… -->
-<!-- (كل الأقسام متاعك تبقى كما هي) -->
-<!-- ……………………………………… -->
+<!-- بقية المحتوى كما هو -->
 
 <!-- ================= FOOTER ================= -->
 <footer class="bg-gray-900 text-gray-300 py-6 text-center">
@@ -64,30 +62,20 @@
 
 <!-- ================= SCRIPTS ================= -->
 <script>
-  /* ====== MUSIC CONTROL ====== */
   const music = document.getElementById("bgMusic");
   const btn = document.getElementById("audioToggleBtn");
 
   music.volume = 0.35;
 
-  window.addEventListener("load", () => {
-    const playPromise = music.play();
-    if (playPromise !== undefined) {
-      playPromise.catch(() => {
-        document.addEventListener("click", () => music.play(), { once: true });
-      });
-    }
-  });
-
   btn.addEventListener("click", () => {
     if (music.paused) {
       music.play();
       btn.innerText = "🔇 إيقاف الصوت";
-      btn.classList.replace("bg-gray-600", "bg-green-700");
+      btn.classList.replace("bg-green-700", "bg-gray-600");
     } else {
       music.pause();
-      btn.innerText = "🔊 إعادة تشغيل الصوت";
-      btn.classList.replace("bg-green-700", "bg-gray-600");
+      btn.innerText = "🔊 تشغيل الصوت";
+      btn.classList.replace("bg-gray-600", "bg-green-700");
     }
   });
 
@@ -121,6 +109,3 @@
 
 </body>
 </html>
-
-
-
